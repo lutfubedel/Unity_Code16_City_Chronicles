@@ -8,6 +8,16 @@ public class EventList : MonoBehaviour
     {
         new List<string>()
         {
+            "Hazýr mýsýn ?",
+            "Evet",
+            "Hayýr",
+            "Money",
+            "People",
+            "=",
+            "="
+        },
+        new List<string>()
+        {
             "Yeni vergiler koymak akýllýca olur. Buradan gelecek para ile acil durum fonu oluþturabiliriz.",
             "Evet oluþtur.",
             "Hayýr, gerek yok",

@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
+
         eventList = GetComponent<EventList>();
 
         index = 0;
@@ -153,7 +155,7 @@ public class GameManager : MonoBehaviour
         for(int i=0; i < eventList.events[index][0].Length; i++)
         {
             eventText.text += eventList.events[index][0][i];
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.075f);
         }
 
         if (eventText.text == eventList.events[index][0])
@@ -204,9 +206,13 @@ public class GameManager : MonoBehaviour
         {
             targetFillAmount += 0.25f;
         }
-        else
+        else if(eventList.events[index][value] == "-")
         {
             targetFillAmount -= 0.25f;
+        }
+        else
+        {
+           
         }
 
         while (Mathf.Abs(fillImage.fillAmount - targetFillAmount) > 0.001f)
