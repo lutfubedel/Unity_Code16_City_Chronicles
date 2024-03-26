@@ -233,6 +233,8 @@ public class GameManager : MonoBehaviour
     public void StartSequentialCoroutine()
     {
         button_ChangeCircle.interactable = false;
+        button_Option1.interactable = false;
+        button_Option2.interactable = false;
 
         StartCoroutine(RunCoroutineSequentially());
         Invoke(nameof(SetText), 5f);
@@ -240,6 +242,8 @@ public class GameManager : MonoBehaviour
     public void StartSequentialCoroutine2()
     {
         button_ChangeCircle.interactable = false;
+        button_Option1.interactable = false;
+        button_Option2.interactable = false;
 
         StartCoroutine(RunCoroutineSequentially2());
         Invoke(nameof(SetText), 5f);
